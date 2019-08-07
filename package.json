@@ -1,0 +1,31 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Proyecto para la creacion de una API",
+  "main": "App.js",
+  "scripts": {
+    "build": "obabel src --out-dir dist",
+    "startAPI": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betonajera9/API.git"
+  },
+  "author": "Beto Najera",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/betonajera9/API/issues"
+  },
+  "homepage": "https://github.com/betonajera9/API#readme",
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "core-js": "^3.1.4",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
+    "nodemon": "^1.19.1",
+    "pg": "^7.12.0",
+    "pg-hstore": "^2.3.3",
+    "regenerator-runtime": "^0.13.3",
+    "sequelize": "^5.12.3"
+  }
+}
