@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Routes
-app.use('/users', routes);
+app.use('/api/users', routes);
 
 //Static Files
 // app.use(express.static(path.join(__dirname, '../Public')));
