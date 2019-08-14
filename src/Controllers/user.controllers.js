@@ -76,9 +76,9 @@ async function deleteUser(req, res) {
 async function updateUser(req, res) {
   try {
     const {id} = req.params;
-    const {username, email, password} = req.body;
+    const {username, email, password, create_at} = req.body;
     const users = await User.findAll({
-      attributes: ['id', 'username', 'email', 'password'],
+      attributes: ['id', 'username', 'email', 'password', 'create_at'],
       where: {
         id
       }
