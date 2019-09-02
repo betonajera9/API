@@ -14,8 +14,5 @@ app.use(express.json());
 //Routes
 app.use('/api/users', routes);
 
-//Static Files
-// app.use(express.static(path.join(__dirname, '../Public')));
-
 //Start server
 app.listen(app.get('port'), () => console.log('Server on port ' + app.get('port')));
