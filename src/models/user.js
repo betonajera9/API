@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize');
-const {sequelize} = require('../database/database');
+import Sequelize from 'sequelize';
+import {sequelize} from '../database/database';
 
 const users = sequelize.define('users', {
   username: {
@@ -12,10 +12,10 @@ const users = sequelize.define('users', {
     type: Sequelize.TEXT
   },
   create_at: {
-    type: Sequelize.DATE
+    type: Sequelize.TEXT
   }
 }, {
   timestamps: false
 });
 
-module.exports = users;
+export default users;

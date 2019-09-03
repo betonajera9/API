@@ -1,8 +1,10 @@
-const express = require('express');
+import express from 'express';
+import morgan from 'morgan';
+import routes from './routes/userRoutes';
+import SERVER from './routes/schemma';
+
+//Initializations
 const app = express();
-const morgan = require('morgan');
-const bodyParser = require('body-parser');
-const routes = require('./routes/userRoutes');
 
 //Settings
 app.set('port', process.env.PORT || 4000);
@@ -12,7 +14,11 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 //Routes
-app.use('/api/users', routes);
+// app.use('/api/users', routes);
+
+SERVER.applyMiddleware({
+  app
+});
 
 //Start server
 app.listen(app.get('port'), () => console.log('Server on port ' + app.get('port')));
