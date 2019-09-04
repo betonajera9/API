@@ -1,3 +1,4 @@
 #Ignorar node_modules
 #Solo al descargar con "npm instal", se instalan todos los modulos necesarios
+dist/
 node_modules/

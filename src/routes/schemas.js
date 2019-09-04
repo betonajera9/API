@@ -1,4 +1,5 @@
 import { ApolloServer, gql } from 'apollo-server-express';
+import GraphQLJSON from'graphql-type-json';
 import {resolvers} from './resolvers';
 
 const typeDefs = gql`
@@ -17,15 +18,15 @@ const typeDefs = gql`
 
   type Mutation {
     createUser(input: UserInput): User
-    updtaeUser(id: Int, input: UserInput): User
+    updateUser(id: Int, input: UserInput): User
     deleteUser(id: Int!): User
   }
 
-  type UserInput{
-    usernmae: String!
+  input UserInput{
+    username: String!
     email: String!
     password: String!
-    create_at: String!
+    create_at: String
   }
 `;
 

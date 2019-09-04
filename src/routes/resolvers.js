@@ -1,7 +1,7 @@
 import User from '../models/user';
 
 export const resolvers = {
-  Qyery: {
+  Query: {
     async getUsers() {
       return await User.findAll();
     },
@@ -13,19 +13,19 @@ export const resolvers = {
       });
     }
   },
-  Mutations: {
+  Mutation: {
     async createUser(_, {input}) {
       return await User.create(input);
     },
     updateUser(_, {id, input}) {
       return console.log('hola');
+    },
+    async deleteUser(_, {id}) {
+      return await User.destroy({
+        where: {
+          id
+        }
+      });
     }
-  },
-  async deleteUser(_, {id}) {
-    return await User.destroy({
-      where: {
-        id
-      }
-    });
   }
 };

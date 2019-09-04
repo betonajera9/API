@@ -4,8 +4,8 @@
   "description": "Proyecto para la creacion de una API",
   "main": "App.js",
   "scripts": {
-    "build": "obabel src --out-dir dist",
-    "startAPI": "nodemon src/app.js"
+    "buildAPI": "babel src -d dist --source-maps",
+    "startAPI": "nodemon src/controllers/app.js --exec babel-node "
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
     "express": "^4.17.1",
     "graphql": "^14.5.4",
     "graphql-tools": "^4.0.5",
+    "graphql-type-json": "^0.3.0",
     "morgan": "^1.9.1",
     "pg": "^7.12.0",
     "sequelize": "^5.12.3"
