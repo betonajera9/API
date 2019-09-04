@@ -11,6 +11,14 @@ export const resolvers = {
           id
         }
       });
+    },
+    async loginUser(_, {username, password}) {
+      return await User.findOne({
+        where: {
+          username,
+          password
+        }
+      });
     }
   },
   Mutation: {

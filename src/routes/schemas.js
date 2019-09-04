@@ -6,6 +6,7 @@ const typeDefs = gql`
   type Query {
     getUsers: [User]
     getOneUser(id: Int): User
+    loginUser(username: String, password: String): User
   }
 
   type User {

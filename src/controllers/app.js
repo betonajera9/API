@@ -1,7 +1,6 @@
 import express from 'express';
 import morgan from 'morgan';
-import routes from './routes/userRoutes';
-import SERVER from './routes/schemas';
+import SERVER from '../routes/schemas';
 
 //Initializations
 const app = express();
