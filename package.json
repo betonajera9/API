@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/betonajera9/API#readme",
   "dependencies": {
-    "apollo-server-express": "^2.9.3",
+    "apollo-server-express": "^2.14.2",
     "express": "^4.17.1",
     "graphql": "^14.5.4",
     "graphql-tools": "^4.0.5",
